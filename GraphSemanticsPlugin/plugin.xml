@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.iti.rsbp.extension.rs">
+      <restrictedSemantics
+            restrictedSemanticsImplementation="org.iti.rsbp.extension.rs.gbsp.GraphSemantics">
+      </restrictedSemantics>
+   </extension>
+   
+   <!-- Variable Update Declaration -->
+   
+   <extension
+         id="rbspVariableUpdateMarkerDeclaration"
+         point="org.eclipse.core.resources.markers"
+         name="Variable Update Declaration">
+      <super type="org.eclipse.core.resources.textmarker" />
+      <persistent value="false" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.editors.annotationTypes">
+     <type
+        super="org.eclipse.ui.workbench.texteditor.warning"
+        markerType="org.iti.rsbp.extension.rs.gbsp.rbspVariableUpdateMarkerDeclaration"
+        name="org.iti.rsbp.extension.rs.gbsp.rbspVariableUpdateMarkerDeclarationAnnotation"/>
+  </extension>
+  
+  <extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+     <specification
+        annotationType="org.iti.rsbp.extension.rs.gbsp.rbspVariableUpdateMarkerDeclarationAnnotation"
+        icon="icons/updateVariableDeclaration.png" />
+  </extension>
+  <extension point="org.eclipse.ui.editors.markerUpdaters">
+     <updater
+           class="org.iti.rsbp.extension.rs.gbsp.marker.VariableUpdateMarkerDeclarationUpdater"
+           id="rbspVariableUpdateMarkerDeclarationUpdater"
+           markerType="org.iti.rsbp.extension.rs.gbsp.rbspVariableUpdateMarkerDeclaration">
+     </updater>
+  </extension>
+  
+  <!-- Variable Update Declaration Error -->
+   
+   <extension
+         id="rbspVariableUpdateMarkerDeclarationError"
+         point="org.eclipse.core.resources.markers"
+         name="Variable Update Declaration Error">
+      <super type="org.eclipse.core.resources.textmarker" />
+      <persistent value="false" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.editors.annotationTypes">
+     <type
+        super="org.eclipse.ui.workbench.texteditor.warning"
+        markerType="org.iti.rsbp.extension.rs.gbsp.rbspVariableUpdateMarkerDeclarationError"
+        name="org.iti.rsbp.extension.rs.gbsp.rbspVariableUpdateMarkerDeclarationErrorAnnotation"/>
+  </extension>
+  
+  <extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+     <specification
+        annotationType="org.iti.rsbp.extension.rs.gbsp.rbspVariableUpdateMarkerDeclarationErrorAnnotation"
+        icon="icons/updateVariableDeclarationError.png" />
+  </extension>
+  
+  <!-- Variable Update -->
+   
+   <extension
+         id="rbspVariableUpdateMarker"
+         point="org.eclipse.core.resources.markers"
+         name="Variable Update">
+      <super type="org.eclipse.core.resources.textmarker" />
+      <persistent value="false" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.editors.annotationTypes">
+     <type
+        super="org.eclipse.ui.workbench.texteditor.warning"
+        markerType="org.iti.rsbp.extension.rs.gbsp.rbspVariableUpdateMarker"
+        name="org.iti.rsbp.extension.rs.gbsp.rbspVariableUpdateMarkerAnnotation"/>
+  </extension>
+  
+  <extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+     <specification
+        annotationType="org.iti.rsbp.extension.rs.gbsp.rbspVariableUpdateMarkerAnnotation"
+        icon="icons/updateVariable.png" />
+  </extension>
+  <extension
+        point="org.eclipse.ui.editors.markerUpdaters">
+     <updater
+           class="org.iti.rsbp.extension.rs.gbsp.marker.VariableUpdateMarkerUpdater"
+           id="rbspVariableUpdateMarkerUpdater"
+           markerType="org.iti.rsbp.extension.rs.gbsp.rbspVariableUpdateMarker">
+     </updater>
+  </extension>
+  
+  <!-- Variable Update Error -->
+   
+   <extension
+         id="rbspVariableUpdateMarkerError"
+         point="org.eclipse.core.resources.markers"
+         name="Variable Update Error">
+      <super type="org.eclipse.core.resources.textmarker" />
+      <persistent value="false" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.editors.annotationTypes">
+     <type
+        super="org.eclipse.ui.workbench.texteditor.warning"
+        markerType="org.iti.rsbp.extension.rs.gbsp.rbspVariableUpdateMarkerError"
+        name="org.iti.rsbp.extension.rs.gbsp.rbspVariableUpdateMarkerAnnotationError"/>
+  </extension>
+  
+  <extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+     <specification
+        annotationType="org.iti.rsbp.extension.rs.gbsp.rbspVariableUpdateMarkerAnnotationError"
+        icon="icons/updateVariableError.png" />
+  </extension>
+  
+  <!-- Variable Access Declaration -->
+   
+   <extension
+         id="rbspVariableAccessMarkerDeclaration"
+         point="org.eclipse.core.resources.markers"
+         name="Variable Access Declaration">
+      <super type="org.eclipse.core.resources.textmarker" />
+      <persistent value="false" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.editors.annotationTypes">
+     <type
+        super="org.eclipse.ui.workbench.texteditor.warning"
+        markerType="org.iti.rsbp.extension.rs.gbsp.rbspVariableAccessMarkerDeclaration"
+        name="org.iti.rsbp.extension.rs.gbsp.rbspVariableAccessMarkerDeclarationAnnotation"/>
+  </extension>
+  
+  <extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+     <specification
+        annotationType="org.iti.rsbp.extension.rs.gbsp.rbspVariableAccessMarkerDeclarationAnnotation"
+        icon="icons/accessVariableDeclaration.png" />
+  </extension>
+  <extension
+        point="org.eclipse.ui.editors.markerUpdaters">
+     <updater
+           class="org.iti.rsbp.extension.rs.gbsp.marker.VariableAccessMarkerDeclarationUpdater"
+           id="rbspVariableAccessMarkerDeclarationUpdater"
+           markerType="org.iti.rsbp.extension.rs.gbsp.rbspVariableAccessMarkerDeclaration">
+     </updater>
+  </extension>
+  
+  <!-- Variable Access Declaration Error -->
+   
+   <extension
+         id="rbspVariableAccessMarkerDeclarationError"
+         point="org.eclipse.core.resources.markers"
+         name="Variable Access Declaration Error">
+      <super type="org.eclipse.core.resources.textmarker" />
+      <persistent value="false" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.editors.annotationTypes">
+     <type
+        super="org.eclipse.ui.workbench.texteditor.warning"
+        markerType="org.iti.rsbp.extension.rs.gbsp.rbspVariableAccessMarkerDeclarationError"
+        name="org.iti.rsbp.extension.rs.gbsp.rbspVariableAccessMarkerDeclarationAnnotationError"/>
+  </extension>
+  
+  <extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+     <specification
+        annotationType="org.iti.rsbp.extension.rs.gbsp.rbspVariableAccessMarkerDeclarationAnnotationError"
+        icon="icons/accessVariableDeclarationError.png" />
+  </extension>
+  
+  <!-- Variable Access -->
+   
+   <extension
+         id="rbspVariableAccessMarker"
+         point="org.eclipse.core.resources.markers"
+         name="Variable Access">
+      <super type="org.eclipse.core.resources.textmarker" />
+      <persistent value="false" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.editors.annotationTypes">
+     <type
+        super="org.eclipse.ui.workbench.texteditor.warning"
+        markerType="org.iti.rsbp.extension.rs.gbsp.rbspVariableAccessMarker"
+        name="org.iti.rsbp.extension.rs.gbsp.rbspVariableAccessMarkerAnnotation"/>
+  </extension>
+  
+  <extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+     <specification
+        annotationType="org.iti.rsbp.extension.rs.gbsp.rbspVariableAccessMarkerAnnotation"
+        icon="icons/accessVariable.png" />
+  </extension>
+  <extension
+        point="org.eclipse.ui.editors.markerUpdaters">
+     <updater
+           class="org.iti.rsbp.extension.rs.gbsp.marker.VariableAccessMarkerUpdater"
+           id="rbspVariableAccessMarkerUpdater"
+           markerType="org.iti.rsbp.extension.rs.gbsp.rbspVariableAccessMarker">
+     </updater>
+  </extension>
+  
+  <!-- Variable Access Error -->
+   
+   <extension
+         id="rbspVariableAccessMarkerError"
+         point="org.eclipse.core.resources.markers"
+         name="Variable Access Error">
+      <super type="org.eclipse.core.resources.textmarker" />
+      <persistent value="false" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.editors.annotationTypes">
+     <type
+        super="org.eclipse.ui.workbench.texteditor.warning"
+        markerType="org.iti.rsbp.extension.rs.gbsp.rbspVariableAccessMarkerError"
+        name="org.iti.rsbp.extension.rs.gbsp.rbspVariableAccessMarkerAnnotationError"/>
+  </extension>
+  
+  <extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+     <specification
+        annotationType="org.iti.rsbp.extension.rs.gbsp.rbspVariableAccessMarkerAnnotationError"
+        icon="icons/accessVariableError.png" />
+  </extension>
+  
+  <!-- Method Call Declaration -->
+   
+   <extension
+         id="rbspMethodCallMarkerDeclaration"
+         point="org.eclipse.core.resources.markers"
+         name="Method Invocation Declaration">
+      <super type="org.eclipse.core.resources.textmarker" />
+      <persistent value="false" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.editors.annotationTypes">
+     <type
+        super="org.eclipse.ui.workbench.texteditor.warning"
+        markerType="org.iti.rsbp.extension.rs.gbsp.rbspMethodCallMarkerDeclaration"
+        name="org.iti.rsbp.extension.rs.gbsp.rbspMethodCallMarkerDeclarationAnnotation"/>
+  </extension>
+  
+  <extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+     <specification
+        annotationType="org.iti.rsbp.extension.rs.gbsp.rbspMethodCallMarkerDeclarationAnnotation"
+        icon="icons/callMethodDeclaration.png" />
+  </extension>
+  <extension
+        point="org.eclipse.ui.editors.markerUpdaters">
+     <updater
+           class="org.iti.rsbp.extension.rs.gbsp.marker.MethodCallMarkerDeclarationUpdater"
+           id="rbspMethodCallMarkerDeclarationUpdater"
+           markerType="org.iti.rsbp.extension.rs.gbsp.rbspMethodCallMarkerDeclaration">
+     </updater>
+  </extension>
+  
+  <!-- Method Call Declaration Error -->
+   
+   <extension
+         id="rbspMethodCallMarkerDeclarationError"
+         point="org.eclipse.core.resources.markers"
+         name="Method Invocation Declaration Error">
+      <super type="org.eclipse.core.resources.textmarker" />
+      <persistent value="false" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.editors.annotationTypes">
+     <type
+        super="org.eclipse.ui.workbench.texteditor.warning"
+        markerType="org.iti.rsbp.extension.rs.gbsp.rbspMethodCallMarkerDeclarationError"
+        name="org.iti.rsbp.extension.rs.gbsp.rbspMethodCallMarkerDeclarationAnnotationError"/>
+  </extension>
+  
+  <extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+     <specification
+        annotationType="org.iti.rsbp.extension.rs.gbsp.rbspMethodCallMarkerDeclarationAnnotationError"
+        icon="icons/callMethodDeclarationError.png" />
+  </extension>
+  
+  <!-- Method Call -->
+   
+   <extension
+         id="rbspMethodCallMarker"
+         point="org.eclipse.core.resources.markers"
+         name="Method Invocation">
+      <super type="org.eclipse.core.resources.textmarker" />
+      <persistent value="false" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.editors.annotationTypes">
+     <type
+        super="org.eclipse.ui.workbench.texteditor.warning"
+        markerType="org.iti.rsbp.extension.rs.gbsp.rbspMethodCallMarker"
+        name="org.iti.rsbp.extension.rs.gbsp.rbspMethodCallMarkerAnnotation"/>
+  </extension>
+  
+  <extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+     <specification
+        annotationType="org.iti.rsbp.extension.rs.gbsp.rbspMethodCallMarkerAnnotation"
+        icon="icons/callMethod.png" />
+  </extension>
+  <extension
+        point="org.eclipse.ui.editors.markerUpdaters">
+     <updater
+           class="org.iti.rsbp.extension.rs.gbsp.marker.MethodCallMarkerUpdater"
+           id="rbspMethodCallMarkerUpdater"
+           markerType="org.iti.rsbp.extension.rs.gbsp.rbspMethodCallMarker">
+     </updater>
+  </extension>
+  
+  <!-- Method Call Error -->
+   
+   <extension
+         id="rbspMethodCallMarkerError"
+         point="org.eclipse.core.resources.markers"
+         name="Method Invocation Error">
+      <super type="org.eclipse.core.resources.textmarker" />
+      <persistent value="false" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.editors.annotationTypes">
+     <type
+        super="org.eclipse.ui.workbench.texteditor.warning"
+        markerType="org.iti.rsbp.extension.rs.gbsp.rbspMethodCallMarkerError"
+        name="org.iti.rsbp.extension.rs.gbsp.rbspMethodCallMarkerAnnotationError"/>
+  </extension>
+  
+  <extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+     <specification
+        annotationType="org.iti.rsbp.extension.rs.gbsp.rbspMethodCallMarkerAnnotationError"
+        icon="icons/callMethodError.png" />
+  </extension>
+  
+  <!-- Refactoring Participants -->
+  
+  <extension
+        point="org.eclipse.ltk.core.refactoring.renameParticipants">
+     <renameParticipant
+           class="org.iti.rsbp.extension.rs.gbsp.GraphSemanticsRenameParticipant"
+           id="org.iti.rbsp.extension.rs.gbsp.GraphSemanticsRenameParticipant"
+           name="GraphSemanticsRenameParticipant">
+        <enablement>
+           <with
+                 variable="affectedNatures">
+              <iterate
+                    operator="or">
+                 <equals
+                       value="org.eclipse.jdt.core.javanature">
+                 </equals>
+              </iterate>
+           </with>
+           <with
+                 variable="element">
+              <or>
+                 <instanceof
+                       value="org.eclipse.jdt.core.IField">
+                 </instanceof>
+                 <instanceof
+                       value="org.eclipse.jdt.core.ILocalVariable">
+                 </instanceof>
+              </or>
+           </with>
+        </enablement>
+     </renameParticipant>
+  </extension>
+  
+
+</plugin>

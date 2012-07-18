@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.iti.rsbp_0.0.0.1.jar" id="org.iti.rsbp" version="0.0.0.1">
+      <category name="org.iti.rbsp"/>
+   </feature>
+   <feature url="features/org.iti.rbsp.extension.rs.gbsp_0.0.0.1.jar" id="org.iti.rbsp.extension.rs.gbsp" version="0.0.0.1">
+      <category name="org.iti.rbsp.extension"/>
+   </feature>
+   <category-def name="org.iti.rbsp" label="Restricted Semantics Base Plugin"/>
+   <category-def name="org.iti.rbsp.extension" label="Restricted Semantics Plugins"/>
+</site>

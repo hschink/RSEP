@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="org.iti.rsbp.extension.rs" name="Restricted Semantics Extension Point" schema="schema/org.iti.rsbp.extension.rs.exsd"/>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Restricted Semantics Category"
+            id="org.iti.rsbp">
+      </category>
+      <view
+            name="Restricted Semantics View"
+            icon="icons/sample.gif"
+            category="org.iti.rsbp"
+            class="org.iti.rsbp.views.RestrictedSemanticsView"
+            id="org.iti.rsbp.views.RestrictedSemanticsView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="org.iti.rsbp.views.RestrictedSemanticsView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         id="restrictedsemanticsmarker"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <super
+            type="org.eclipse.core.resources.textmarker">
+      </super>
+      <persistent
+            value="false">
+      </persistent>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+      		locationURI="popup:#CompilationUnitEditorContext">
+         <dynamic
+               class="org.iti.rsbp.menu.RestrictedSemanticsMenu"
+               id="org.iti.rbsp.meu.restrictedSemanticsMenu">
+         </dynamic>
+      </menuContribution>
+   </extension>
+   <extension
+         id="rbspSemanticsMarker"
+         name="Semantics Marker"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.textmarker">
+      </super>
+      <persistent
+            value="false">
+      </persistent>
+   </extension>
+</plugin>
