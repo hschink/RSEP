@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.iti.rbsp.extension.rs.gbsp"
+      label="Graph Semantics Plugin"
+      version="0.0.0.1">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.core.resources" version="3.8.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.8.0" match="greaterOrEqual"/>
+      <import plugin="org.iti.rsbp"/>
+      <import plugin="org.eclipse.jdt.core" version="3.8.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.editors" version="3.8.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui" version="3.103.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jdt.ui" version="3.8.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ltk.core.refactoring" version="3.6.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ltk.ui.refactoring" version="3.7.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jdt.core.manipulation"/>
+      <import plugin="org.eclipse.jface.text"/>
+   </requires>
+
+   <plugin
+         id="org.iti.rsbp.extension.rs.gbsp"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
